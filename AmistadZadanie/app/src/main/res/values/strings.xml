@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AmistadZadanie</string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="km">KM</string>
+    <string name="dialog_positive_button">SprobujPonownie</string>
+    <string name="dialog_negative_button">Anuluj</string>
+    <string name="dialog_title">WystapilBlad</string>
+
+</resources>
