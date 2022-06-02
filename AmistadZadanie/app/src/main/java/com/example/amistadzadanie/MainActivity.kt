@@ -3,6 +3,7 @@ package com.example.amistadzadanie
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -48,9 +49,13 @@ class MainActivity : AppCompatActivity() {
 
                 is Resource.Error -> {
                     hideProgressBar()
+                    response.message.let {
+                        Log.e("TAG", "An error occurred: $it")
+
+                    }
                     AlertDialog.Builder(this).apply {
                         setTitle(R.string.dialog_title)
-                        setMessage(response.message)
+                        setMessage(R.string.dialog_description)
                         setPositiveButton(R.string.dialog_positive_button,
                             DialogInterface.OnClickListener { dialogInterface, i ->
                                 viewModel.loadRoutes()
