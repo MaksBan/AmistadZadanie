@@ -4,7 +4,6 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
@@ -12,7 +11,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.amistadzadanie.databinding.ActivityMainBinding
 import com.example.amistadzadanie.viewModel.MainViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
-import java.lang.IllegalStateException
 
 
 class MainActivity : AppCompatActivity() {
@@ -65,6 +63,7 @@ class MainActivity : AppCompatActivity() {
                                 dialogInterface.dismiss()
                             })
                         create()
+                        show()
                     } ?: throw IllegalStateException("Activity cannot be null")
 
                 }
